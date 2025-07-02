@@ -302,13 +302,12 @@ textarea {
 .home-banner{
   position: absolute;
   right: 0;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
 }
 
 .home-img-wrapper{
-  background-color:orangered;
-  width: clamp(21rem, 12.6rem + 33.6vw, 42rem);
+  width: clamp(15rem, 10rem + 28vw, 38rem);
   border-radius: 0 0 100vw 100vw;
   overflow: hidden;
 }
@@ -425,9 +424,90 @@ textarea {
 /*=============== FOOTER ===============*/
 
 /*=============== STYLE SWITCHER ===============*/
+.style-switcher{
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 450px;
+  height: 100%;
+  background-color: var(--container-color);
+  padding: 5rem 0 0 3.5rem;
+  z-index: 1000;
+  transition: right 1s var(--transition);
+}
 
+.style-switcher-title{
+  font-size: var(--h3-font-size);
+  padding-bottom: 1.25rem;
+}
+
+.style-switcher-title,
+.style-switcher-item{
+  border-bottom: 1px solid var(--shadow-color);
+}
+
+.style-switcher-item{
+  padding-block: 1rem;
+}
+.style-switcher-subtitle{
+  font-size: var(--large-font-size);
+  margin-bottom: 1rem;
+}
+
+.style-switcher-colors{
+  display: flex;
+  column-gap: 0.5rem;
+}
+
+.style-switcher-color{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: hsl(var(--hue), 60%, 40%);
+  position:relative;
+}
+.style-switcher-color i{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--white-color);
+  font-size: 1.25rem;
+  display: none;
+}
+.active-color i{
+  display: block; 
+}
+.style-switcher-themes,
+.style-switcher-theme{
+  display: flex;
+}
+.style-switcher-themes{
+  column-gap: 1.25rem;
+}
+.style-switcher-theme{
+  column-gap: 0.5rem;
+}
+
+.style-switcher-input{
+  accent-color: var(--first-color);
+}
+
+.style-switcher-label{
+  color: var(--title-color);
+}
+
+.style-switcher-close{
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
 /* Show switcher */
-
+.show-switcher{
+  right: 0;
+}
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
 @media screen and (max-width: 1200px) {
